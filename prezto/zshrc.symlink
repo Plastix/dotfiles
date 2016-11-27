@@ -25,7 +25,10 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+
+# Only search for .zsh files one level deep
+# "$ZSH/**/*.zsh" will also source the prezto submodule files. We don't want that!
+config_files=($ZSH/*/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
