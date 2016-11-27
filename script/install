@@ -8,6 +8,7 @@ cd "$(dirname $0)"/..
 
 # Run Homebrew through the Brewfile
 echo "› brew bundle"
+brew tap Homebrew/bundle
 brew bundle
 
 # find the installers and run them iteratively
