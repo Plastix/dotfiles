@@ -1,3 +1,6 @@
 [submodule "prezto/prezto.symlink"]
 	path = prezto/prezto.symlink
 	url = git@github.com:sorin-ionescu/prezto.git
+[submodule "vim/vim.symlink/bundle/Vundle.vim"]
+	path = vim/vim.symlink/bundle/Vundle.vim
+	url = git@github.com:VundleVim/Vundle.vim.git
