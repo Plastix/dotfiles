@@ -41,5 +41,6 @@ time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
 ## Attributions
-
-TODO
+- @holman: Dotfiles format and base install scripts
+- @nicksp: Some shell aliases
+- @mathiasbynens: Custom MacOS script
