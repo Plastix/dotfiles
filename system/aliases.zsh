@@ -9,6 +9,7 @@ alias .....="cd ../../../.."
 # Shortcuts
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
+alias dc="cd ~/Documents"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
