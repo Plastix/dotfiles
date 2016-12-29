@@ -12,7 +12,7 @@ alias dt="cd ~/Desktop"
 alias dc="cd ~/Documents"
 
 # Enable aliases to be sudo’ed
-alias sudo='sudo '
+#alias sudo='sudo '
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
