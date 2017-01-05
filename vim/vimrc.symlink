@@ -10,14 +10,14 @@ Plugin 'gmarik/Vundle.vim'
 " ----- Making Vim look good ------------------------------------------
 Plugin 'bling/vim-airline'
 Plugin 'flazz/vim-colorschemes'
-" Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'luochen1990/rainbow'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ervandew/supertab'
+"Plugin 'scrooloose/syntastic'
+"Plugin 'kien/ctrlp.vim'
+"Plugin 'ervandew/supertab'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -25,6 +25,7 @@ Plugin 'airblade/vim-gitgutter'
 " ----- Other text editing features -----------------------------------
 " Plugin 'Raimondi/delimitMate'
 " Plugin 'jiangmiao/auto-pairs'
+Plugin 'kovisoft/paredit'
 
 call vundle#end()
 
@@ -48,7 +49,7 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 let g:airline_theme='dark'
 " Set the colorscheme
-colorscheme smyck 
+colorscheme molokai 
 " set background=dark
 
 " ----- bling/vim-airline settings -----
@@ -95,3 +96,7 @@ augroup END
 hi clear SignColumn
 "  In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
+
+" ----- Enale Rainbow Parens -----
+let g:rainbow_active = 1 
+
