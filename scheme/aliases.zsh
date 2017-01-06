@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-# Install EPOL-Scheme over Petite Chez Scheme
-alias petite="/usr/bin/petite $ZSH/scheme/EOPL-Scheme/chez-init.scm"
+# Install EPOL-Scheme over Chez Scheme
+alias scheme="/usr/local/bin/scheme $ZSH/scheme/EOPL-Scheme/chez-init.scm"
