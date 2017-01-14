@@ -7,3 +7,6 @@
 [submodule "font/MenloPowerline"]
 	path = font/MenloPowerline
 	url = https://github.com/abertsch/Menlo-for-Powerline.git
+[submodule "scheme/EOPL-Scheme"]
+	path = scheme/EOPL-Scheme
+	url = git@github.com:Plastix/EOPL-Scheme.git
