@@ -18,3 +18,5 @@ alias dc="cd ~/Documents"
 alias path='echo -e ${PATH//:/\\n}'
 
 alias reload="source ~/.zshrc && echo 'Shell config reloaded from ~/.zshrc'"
+
+alias dotfiles="cd $ZSH"
