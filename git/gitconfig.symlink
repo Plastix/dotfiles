@@ -21,7 +21,7 @@
     panic     = !tar cvf ../git_panic.tar *
     wdiff     = diff --word-diff=plain
     fix       = "commit -a --amend -C HEAD"
-    fpush     = push --force
+    fpush     = push --force-with-lease
     count     = !git shortlog -sn
     fixrebase = "!f() { git filter-branch -f --env-filter 'GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL; GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME; GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_EMAIL; export GIT_COMMITTER_NAME; export GIT_COMMITTER_DATE' $1..HEAD; }; f"
 
