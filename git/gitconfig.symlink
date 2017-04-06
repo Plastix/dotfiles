@@ -1,60 +1,80 @@
 # Local/private config goes in the include
 [include]
-        path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
 [core]
     editor = "vim"
     autocrlf = false
     excludesfile = ~/.gitignore
         
-#Some aliases from http://www.mediawiki.org/wiki/Git/aliases
+# Some aliases from http://www.mediawiki.org/wiki/Git/aliases
 [alias]
     br        = branch
     co        = checkout
     ds        = diff --staged
     di        = diff
     st        = status
-    amend     = commit --amend -a
-    fetchall  = fetch -v --all
+
+    # Pretty git log
     lg        = log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
-    lgm       = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%h %cd %s' --date=short
-    lgs       = log --graph --decorate --pretty=oneline --abbrev-commit
-    panic     = !tar cvf ../git_panic.tar *
-    wdiff     = diff --word-diff=plain
+
+    amend     = commit --amend -a
+
+    # Stage and rebase all changes into last commit
     fix       = "commit -a --amend -C HEAD"
+
+    # "Revert" to before commit
+    undo      = reset --soft HEAD^
+
+    # Stash all files including untracked
+    stashall = stash save --include-untracked
+
+    fetchall  = fetch -v --all
+
+    # Delete all branches not on remote
+    prune     = fetch --prune
+
     fpush     = push --force-with-lease
     count     = !git shortlog -sn
+
     fixrebase = "!f() { git filter-branch -f --env-filter 'GIT_COMMITTER_EMAIL=$GIT_AUTHOR_EMAIL; GIT_COMMITTER_NAME=$GIT_AUTHOR_NAME; GIT_COMMITTER_DATE=$GIT_AUTHOR_DATE; export GIT_COMMITTER_EMAIL; export GIT_COMMITTER_NAME; export GIT_COMMITTER_DATE' $1..HEAD; }; f"
+
+[merge]
+    # Always avoid merge commits
+    ff = only
+
+[push]
+    # Send tags to remote on every push
+    followTags = true
 
 # Pretty colors!
 [color]
     ui = always
 
 [color "diff"]
-        meta = yellow bold
-        commit = green bold
-        frag = magenta bold
-        old = red bold
-        new = green bold
-        whitespace = red reverse
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
 
 [color "diff-highlight"]
-        oldNormal = red bold
-        oldHighlight = red bold 52
-        newNormal = green bold
-        newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 
 [advice]
     statusHints = false
 
 [apply]
-        whitespace = nowarn
+    whitespace = nowarn
 
 [filter "media"]
-        clean = git-media-clean %f
-        smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 
 [pager]
-        diff = diff-so-fancy | less --tabs=1,5 -RFX
-        show = diff-so-fancy | less --tabs=1,5 -RFX
-
-
+    # Fancy looking diffs!
+    diff = diff-so-fancy | less --tabs=1,5 -RFX
+    show = diff-so-fancy | less --tabs=1,5 -RFX
