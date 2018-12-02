@@ -1,6 +1,7 @@
 [submodule "prezto/zprezto.symlink"]
 	path = prezto/zprezto.symlink
 	url = https://github.com/sorin-ionescu/prezto.git
+	ignore = dirty
 [submodule "vim/vim.symlink/bundle/Vundle.vim"]
 	path = vim/vim.symlink/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
