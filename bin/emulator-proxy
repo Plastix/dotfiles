@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Helper command for for running the Android emulator with an HTTP proxy enabled 
-
-exec $ZSH/android/emulator-proxy.sh
