@@ -41,6 +41,8 @@
     # Set the current git commit date to the current date
     update-date = commit --amend --no-edit --date=now
 
+    autosquash = rebase -i --autosquash
+
 [merge]
     # Always avoid merge commits
     ff = only
