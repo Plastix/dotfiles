@@ -50,3 +50,5 @@ git/gitconfig.local.symlink
 vim/vim.symlink/bundle/
 
 system/aliases.local.zsh
+# Ignore all local zsh files
+*.local.zsh
